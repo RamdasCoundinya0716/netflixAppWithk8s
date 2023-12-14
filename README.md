@@ -29,10 +29,10 @@
 - Update all the packages and then clone the code.
 - Clone your application's code repository onto the EC2 instance:
     
-    ```bash
+    ```bash *
     git clone https://github.com/N4si/DevSecOps-Project.git      
     ```
-    **** Full credits to this developer!
+    * Full credits to this developer!
     
 
 **Step 3: Install Docker and Run the App Using a Container:**
