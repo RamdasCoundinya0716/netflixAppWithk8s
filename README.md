@@ -29,8 +29,13 @@
 - Update all the packages and then clone the code.
 - Clone your application's code repository onto the EC2 instance:
     
+<<<<<<< HEAD
+    ```bash
+    git clone https://github.com/RamdasCoundinya0716/netflixAppWithk8s.git
+=======
     ```bash *
     git clone https://github.com/RamdasCoundinya0716/netflixAppWithk8s
+>>>>>>> 5aadebaf130a508dcd63adde97bc4e0bac3e7341
     ```
     
 
@@ -285,7 +290,11 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
+<<<<<<< HEAD
+                git branch: 'main', url: 'https://github.com/RamdasCoundinya0716/netflixAppWithk8s.git'
+=======
                 git branch: 'main', url: ''
+>>>>>>> 5aadebaf130a508dcd63adde97bc4e0bac3e7341
             }
         }
         stage("Sonarqube Analysis "){
@@ -324,20 +333,20 @@ pipeline{
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){   
                        sh "docker build --build-arg TMDB_V3_API_KEY=<yourapikey> -t netflix ."
-                       sh "docker tag netflix nasi101/netflix:latest "
-                       sh "docker push nasi101/netflix:latest "
+                       sh "docker tag netflix ram0716/netflix:latest "
+                       sh "docker push ram0716/netflix:latest "
                     }
                 }
             }
         }
         stage("TRIVY"){
             steps{
-                sh "trivy image nasi101/netflix:latest > trivyimage.txt" 
+                sh "trivy image ram0716/netflix:latest > trivyimage.txt" 
             }
         }
         stage('Deploy to container'){
             steps{
-                sh 'docker run -d --name netflix -p 8081:80 nasi101/netflix:latest'
+                sh 'docker run -d --name netflix -p 8081:80 ram0716/netflix:latest'
             }
         }
     }
@@ -746,4 +755,8 @@ To deploy an application with ArgoCD, you can follow these steps, which I'll out
 **Phase 7: Cleanup**
 
 1. **Cleanup AWS EC2 Instances:**
+<<<<<<< HEAD
     - Terminate AWS EC2 instances that are no longer needed.
+=======
+    - Terminate AWS EC2 instances that are no longer needed.
+>>>>>>> 5aadebaf130a508dcd63adde97bc4e0bac3e7341
