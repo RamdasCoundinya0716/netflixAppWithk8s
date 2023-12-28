@@ -30,10 +30,8 @@
 - Clone your application's code repository onto the EC2 instance:
     ```bash
     git clone https://github.com/RamdasCoundinya0716/netflixAppWithk8s.git
-=======
     ```bash *
     git clone https://github.com/RamdasCoundinya0716/netflixAppWithk8s
->>>>>>> 5aadebaf130a508dcd63adde97bc4e0bac3e7341
     ```
     
 
