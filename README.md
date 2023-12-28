@@ -28,8 +28,6 @@
 
 - Update all the packages and then clone the code.
 - Clone your application's code repository onto the EC2 instance:
-    
-<<<<<<< HEAD
     ```bash
     git clone https://github.com/RamdasCoundinya0716/netflixAppWithk8s.git
 =======
